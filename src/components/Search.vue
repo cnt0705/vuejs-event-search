@@ -5,13 +5,11 @@
 </template>
 
 <script>
-  import { mapActions } from 'vuex'
-
   export default {
     methods: {
-      ...mapActions([
-        'searchEvents'
-      ])
+      searchEvents(value) {
+        this.$emit('searchEvents', value)
+      }
     }
   }
 </script>

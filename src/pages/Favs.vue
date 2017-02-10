@@ -1,6 +1,8 @@
 <template>
-  <list-view v-if="hasFavs" :events="favs"></list-view>
-  <p v-else>お気に入りのイベントはありません。</p>
+  <div class="favs-content">
+    <list-view v-if="hasFavs" :events="favs"></list-view>
+    <p v-else>お気に入りのイベントはありません。</p>
+  </div>
 </template>
 
 <script>

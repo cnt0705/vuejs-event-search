@@ -2,7 +2,7 @@
   <li>
     <p>{{event.title}}</p>
     <p>{{event.started_at}}</p>
-    <p><a href="{event.event_url}">{{event.event_url}}</a></p>
+    <p><a href="{event.event_url}" target="_blank">{{event.event_url}}</a></p>
     <button
       :disabled="isFavItem"
       @click="addItemToFav(index)">

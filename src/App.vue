@@ -17,3 +17,7 @@
     }
   }
 </script>
+
+<style>
+  @import '../static/common.css';
+</style>

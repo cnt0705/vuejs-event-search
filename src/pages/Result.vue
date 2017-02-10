@@ -39,3 +39,9 @@
     }
   }
 </script>
+
+<style scoped>
+  .result-content {
+    padding: 20px;
+  }
+</style>

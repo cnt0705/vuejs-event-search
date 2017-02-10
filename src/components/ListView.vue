@@ -26,3 +26,9 @@
     }
   }
 </script>
+
+<style>
+  ul {
+    padding: 0;
+  }
+</style>

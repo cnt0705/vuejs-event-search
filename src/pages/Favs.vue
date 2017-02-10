@@ -23,3 +23,9 @@
     }
   }
 </script>
+
+<style scoped>
+  .favs-content {
+    padding: 20px;
+  }
+</style>

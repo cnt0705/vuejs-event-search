@@ -1,6 +1,11 @@
 <template>
   <ul>
-    <list-item v-for="event in events" :event="event"></list-item>
+    <list-item
+      v-for="(event, index) in events"
+      :event="event"
+      :index='index'
+      @addItemToFav="addItemToFav">
+    </list-item>
   </ul>
 </template>
 
@@ -10,6 +15,11 @@
   export default {
     props: {
       events: Array
+    },
+    methods: {
+      addItemToFav(index) {
+        this.$emit('addItemToFav', index)
+      }
     },
     components: {
       ListItem

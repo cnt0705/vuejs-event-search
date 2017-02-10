@@ -1,6 +1,7 @@
 import {
   CHANGE_KEYWORD,
   SEARCH,
+  ADD_FAVID,
   ADD_FAVS
 } from './mutation-types'
 
@@ -17,7 +18,8 @@ const state = {
  * Getters
  */
 const getters = {
-  events: state => state.events
+  events: state => state.events,
+  favs: state => state.favs
 }
 
 /**
@@ -31,6 +33,11 @@ const actions = {
       .then(data => {
         commit(SEARCH, data)
       }).catch()
+  },
+
+  addItemToFav({ commit, state }, index) {
+    commit(ADD_FAVID, index)
+    commit(ADD_FAVS, state.events[index])
   }
 }
 
@@ -69,8 +76,11 @@ const mutations = {
   [SEARCH](state, data) {
     state.events = data.events
   },
+  [ADD_FAVID](state, index) {
+    state.events[index].favId = index
+  },
   [ADD_FAVS](state, data) {
-    state.favs = data
+    state.favs.push(data)
   }
 }
 
